@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		AFFDA8A8219335FC006661E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA8A7219335FC006661E7 /* AppDelegate.swift */; };
-		AFFDA8AA219335FC006661E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA8A9219335FC006661E7 /* ViewController.swift */; };
+		AFFDA8AA219335FC006661E7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA8A9219335FC006661E7 /* WelcomeViewController.swift */; };
 		AFFDA8AD219335FC006661E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFDA8AB219335FC006661E7 /* Main.storyboard */; };
 		AFFDA8B0219335FC006661E7 /* iBetterRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA8AE219335FC006661E7 /* iBetterRide.xcdatamodeld */; };
 		AFFDA8B22193360B006661E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFFDA8B12193360B006661E7 /* Assets.xcassets */; };
 		AFFDA8B52193360B006661E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFDA8B32193360B006661E7 /* LaunchScreen.storyboard */; };
+		AFFDA905219387F7006661E7 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA904219387F7006661E7 /* ProjectsViewController.swift */; };
+		AFFDA90721938866006661E7 /* OperatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA90621938866006661E7 /* OperatorsViewController.swift */; };
+		AFFDA9092193888D006661E7 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */; };
+		AFFDA90B219388B6006661E7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA90A219388B6006661E7 /* ProfileViewController.swift */; };
+		AFFDA90D219389DE006661E7 /* UImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA90C219389DE006661E7 /* UImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,13 +75,18 @@
 /* Begin PBXFileReference section */
 		AFFDA8A4219335FC006661E7 /* iBetterRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBetterRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFDA8A7219335FC006661E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFFDA8A9219335FC006661E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFFDA8A9219335FC006661E7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		AFFDA8AC219335FC006661E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFFDA8AF219335FC006661E7 /* iBetterRide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iBetterRide.xcdatamodel; sourceTree = "<group>"; };
 		AFFDA8B12193360B006661E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFFDA8B42193360B006661E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFFDA8B62193360B006661E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFFDA8C521933AA3006661E7 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		AFFDA904219387F7006661E7 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		AFFDA90621938866006661E7 /* OperatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsViewController.swift; sourceTree = "<group>"; };
+		AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
+		AFFDA90A219388B6006661E7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AFFDA90C219389DE006661E7 /* UImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +133,12 @@
 		AFFDA8BE21933921006661E7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AFFDA8A9219335FC006661E7 /* ViewController.swift */,
+				AFFDA8A9219335FC006661E7 /* WelcomeViewController.swift */,
+				AFFDA904219387F7006661E7 /* ProjectsViewController.swift */,
+				AFFDA90621938866006661E7 /* OperatorsViewController.swift */,
+				AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */,
+				AFFDA90A219388B6006661E7 /* ProfileViewController.swift */,
+				AFFDA90C219389DE006661E7 /* UImageViewExtension.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -304,9 +319,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFFDA8AA219335FC006661E7 /* ViewController.swift in Sources */,
+				AFFDA905219387F7006661E7 /* ProjectsViewController.swift in Sources */,
+				AFFDA8AA219335FC006661E7 /* WelcomeViewController.swift in Sources */,
 				AFFDA8B0219335FC006661E7 /* iBetterRide.xcdatamodeld in Sources */,
 				AFFDA8A8219335FC006661E7 /* AppDelegate.swift in Sources */,
+				AFFDA90D219389DE006661E7 /* UImageViewExtension.swift in Sources */,
+				AFFDA90B219388B6006661E7 /* ProfileViewController.swift in Sources */,
+				AFFDA90721938866006661E7 /* OperatorsViewController.swift in Sources */,
+				AFFDA9092193888D006661E7 /* AnalyticsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
