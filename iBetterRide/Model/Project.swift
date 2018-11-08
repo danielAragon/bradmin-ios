@@ -11,6 +11,6 @@ struct Project: Codable {
     var id: String?
     var name: String?
     var date: String?
-    var supervisor_id: Int?
+    var supervisor_id: String?
     var num_session: Int?
 }

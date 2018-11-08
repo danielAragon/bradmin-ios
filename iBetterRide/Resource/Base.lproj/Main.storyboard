@@ -38,10 +38,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="h1A-ju-Adw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DgQ-4c-L5y"/>
+                            <constraint firstItem="h1A-ju-Adw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YGI-mu-yj6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9cb-LC-FXd" secondAttribute="bottom" constant="20" id="Zsw-Kl-8f3"/>
+                            <constraint firstItem="h1A-ju-Adw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gW9-Ow-Y9W"/>
                             <constraint firstItem="9cb-LC-FXd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kWI-l2-dbp"/>
-                            <constraint firstItem="h1A-ju-Adw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rQr-5M-COR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -95,7 +95,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="a45-gZ-l7e"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="k3f-g8-pF7"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="k3f-g8-pF7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwl-c8-VI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,11 +122,11 @@
             </objects>
             <point key="canvasLocation" x="775" y="1101"/>
         </scene>
-        <!--Project-->
+        <!--Projects-->
         <scene sceneID="kBY-bW-4gn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4bn-Uo-3ZT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Project" id="9YI-qq-bfC"/>
+                    <tabBarItem key="tabBarItem" title="Projects" image="projects" id="9YI-qq-bfC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3as-6o-NzK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -157,26 +157,35 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="67.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-91-Ku5">
-                                            <rect key="frame" x="20" y="35" width="374" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwB-Rd-Ngh">
+                                            <rect key="frame" x="85" y="11" width="309" height="23"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwB-Rd-Ngh">
-                                            <rect key="frame" x="20" y="11" width="374" height="23"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="project" translatesAutoresizingMaskIntoConstraints="NO" id="ZAT-ec-Oca">
+                                            <rect key="frame" x="20" y="11" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="44" id="Mio-7h-eDN"/>
+                                                <constraint firstAttribute="height" constant="44" id="rVW-Cd-Ils"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-91-Ku5">
+                                            <rect key="frame" x="85" y="38" width="309" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="fwB-Rd-Ngh" firstAttribute="top" secondItem="Dxd-AP-Pkl" secondAttribute="top" constant="11" id="4ix-gq-obO"/>
-                                        <constraint firstItem="fr0-91-Ku5" firstAttribute="leading" secondItem="Dxd-AP-Pkl" secondAttribute="leading" constant="20" id="9cN-qr-Djb"/>
-                                        <constraint firstItem="fr0-91-Ku5" firstAttribute="top" secondItem="fwB-Rd-Ngh" secondAttribute="bottom" constant="1" id="Qaj-zH-KCI"/>
-                                        <constraint firstItem="fwB-Rd-Ngh" firstAttribute="centerX" secondItem="Dxd-AP-Pkl" secondAttribute="centerX" id="Z7a-xK-yVT"/>
-                                        <constraint firstItem="fr0-91-Ku5" firstAttribute="centerX" secondItem="Dxd-AP-Pkl" secondAttribute="centerX" id="Zhm-Bg-aEs"/>
-                                        <constraint firstItem="fwB-Rd-Ngh" firstAttribute="leading" secondItem="Dxd-AP-Pkl" secondAttribute="leading" constant="20" id="f6O-oM-6iy"/>
+                                        <constraint firstItem="fwB-Rd-Ngh" firstAttribute="leading" secondItem="fr0-91-Ku5" secondAttribute="leading" id="Dhb-29-79l"/>
+                                        <constraint firstItem="fwB-Rd-Ngh" firstAttribute="trailing" secondItem="fr0-91-Ku5" secondAttribute="trailing" id="ERD-WU-fLf"/>
+                                        <constraint firstItem="fwB-Rd-Ngh" firstAttribute="leading" secondItem="ZAT-ec-Oca" secondAttribute="trailing" constant="21" id="U6F-uc-KNc"/>
+                                        <constraint firstItem="fr0-91-Ku5" firstAttribute="top" secondItem="fwB-Rd-Ngh" secondAttribute="bottom" constant="4" id="Wcp-IE-NxP"/>
+                                        <constraint firstItem="ZAT-ec-Oca" firstAttribute="leading" secondItem="Dxd-AP-Pkl" secondAttribute="leading" constant="20" id="ZSN-J7-Mhu"/>
+                                        <constraint firstItem="fwB-Rd-Ngh" firstAttribute="top" secondItem="ZAT-ec-Oca" secondAttribute="top" id="ZUf-bz-4rV"/>
+                                        <constraint firstItem="fwB-Rd-Ngh" firstAttribute="trailing" secondItem="Dxd-AP-Pkl" secondAttribute="trailingMargin" id="jmb-g3-bO3"/>
+                                        <constraint firstItem="ZAT-ec-Oca" firstAttribute="top" secondItem="Dxd-AP-Pkl" secondAttribute="top" constant="11" id="mVj-YZ-tGE"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -191,7 +200,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Projects" id="bj7-Wg-C8h">
-                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="fi9-mV-oZi"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FEQ-XL-4WN"/>
                     </navigationItem>
                     <connections>
@@ -240,7 +248,7 @@
         <scene sceneID="OBT-0q-0cy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nde-Jh-fDC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Analytics" id="FrD-1v-GdN"/>
+                    <tabBarItem key="tabBarItem" title="Analytics" image="analytics" id="FrD-1v-GdN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WDw-G3-TUB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -292,6 +300,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="analytics" width="24" height="24"/>
+        <image name="profile" width="24" height="24"/>
+        <image name="project" width="64" height="64"/>
+        <image name="projects" width="24" height="24"/>
         <image name="roads" width="563" height="579"/>
     </resources>
 </document>
