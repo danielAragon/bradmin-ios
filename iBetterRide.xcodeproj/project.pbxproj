@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF5398602193E88700D91430 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF53985F2193E88700D91430 /* ProjectsViewController.swift */; };
+		AF5398622193EC0500D91430 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5398612193EC0500D91430 /* ProjectCell.swift */; };
+		AF5398642193ED9B00D91430 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5398632193ED9B00D91430 /* Project.swift */; };
+		AF5398662193EF2200D91430 /* BetterRideApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5398652193EF2200D91430 /* BetterRideApi.swift */; };
+		AF5398682193EF3900D91430 /* ProjectsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5398672193EF3900D91430 /* ProjectsResponse.swift */; };
+		AF5398692193EF7D00D91430 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFDA8D121933AA3006661E7 /* Alamofire.framework */; };
+		AF53986A2193EF7D00D91430 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFFDA8D121933AA3006661E7 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AFFDA8A8219335FC006661E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA8A7219335FC006661E7 /* AppDelegate.swift */; };
 		AFFDA8AA219335FC006661E7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA8A9219335FC006661E7 /* WelcomeViewController.swift */; };
 		AFFDA8AD219335FC006661E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFDA8AB219335FC006661E7 /* Main.storyboard */; };
 		AFFDA8B0219335FC006661E7 /* iBetterRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA8AE219335FC006661E7 /* iBetterRide.xcdatamodeld */; };
 		AFFDA8B22193360B006661E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFFDA8B12193360B006661E7 /* Assets.xcassets */; };
 		AFFDA8B52193360B006661E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFDA8B32193360B006661E7 /* LaunchScreen.storyboard */; };
-		AFFDA905219387F7006661E7 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA904219387F7006661E7 /* ProjectsViewController.swift */; };
 		AFFDA90721938866006661E7 /* OperatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA90621938866006661E7 /* OperatorsViewController.swift */; };
 		AFFDA9092193888D006661E7 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */; };
 		AFFDA90B219388B6006661E7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA90A219388B6006661E7 /* ProfileViewController.swift */; };
@@ -21,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AF53986B2193EF7D00D91430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFFDA8C521933AA3006661E7 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 		AFFDA8D021933AA3006661E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AFFDA8C521933AA3006661E7 /* Alamofire.xcodeproj */;
@@ -72,7 +85,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AF53986D2193EF7D00D91430 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AF53986A2193EF7D00D91430 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AF53985F2193E88700D91430 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		AF5398612193EC0500D91430 /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
+		AF5398632193ED9B00D91430 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		AF5398652193EF2200D91430 /* BetterRideApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRideApi.swift; sourceTree = "<group>"; };
+		AF5398672193EF3900D91430 /* ProjectsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsResponse.swift; sourceTree = "<group>"; };
 		AFFDA8A4219335FC006661E7 /* iBetterRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBetterRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFDA8A7219335FC006661E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFFDA8A9219335FC006661E7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +114,6 @@
 		AFFDA8B42193360B006661E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFFDA8B62193360B006661E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFFDA8C521933AA3006661E7 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		AFFDA904219387F7006661E7 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		AFFDA90621938866006661E7 /* OperatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsViewController.swift; sourceTree = "<group>"; };
 		AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		AFFDA90A219388B6006661E7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF5398692193EF7D00D91430 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,11 +166,12 @@
 			isa = PBXGroup;
 			children = (
 				AFFDA8A9219335FC006661E7 /* WelcomeViewController.swift */,
-				AFFDA904219387F7006661E7 /* ProjectsViewController.swift */,
 				AFFDA90621938866006661E7 /* OperatorsViewController.swift */,
 				AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */,
 				AFFDA90A219388B6006661E7 /* ProfileViewController.swift */,
 				AFFDA90C219389DE006661E7 /* UImageViewExtension.swift */,
+				AF53985F2193E88700D91430 /* ProjectsViewController.swift */,
+				AF5398612193EC0500D91430 /* ProjectCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -156,6 +189,8 @@
 		AFFDA8C2219339D0006661E7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				AF5398652193EF2200D91430 /* BetterRideApi.swift */,
+				AF5398672193EF3900D91430 /* ProjectsResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -164,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				AFFDA8AE219335FC006661E7 /* iBetterRide.xcdatamodeld */,
+				AF5398632193ED9B00D91430 /* Project.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,10 +236,12 @@
 				AFFDA8A0219335FC006661E7 /* Sources */,
 				AFFDA8A1219335FC006661E7 /* Frameworks */,
 				AFFDA8A2219335FC006661E7 /* Resources */,
+				AF53986D2193EF7D00D91430 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AF53986C2193EF7D00D91430 /* PBXTargetDependency */,
 			);
 			name = iBetterRide;
 			productName = iBetterRide;
@@ -319,10 +357,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFFDA905219387F7006661E7 /* ProjectsViewController.swift in Sources */,
+				AF5398602193E88700D91430 /* ProjectsViewController.swift in Sources */,
 				AFFDA8AA219335FC006661E7 /* WelcomeViewController.swift in Sources */,
 				AFFDA8B0219335FC006661E7 /* iBetterRide.xcdatamodeld in Sources */,
+				AF5398662193EF2200D91430 /* BetterRideApi.swift in Sources */,
+				AF5398642193ED9B00D91430 /* Project.swift in Sources */,
 				AFFDA8A8219335FC006661E7 /* AppDelegate.swift in Sources */,
+				AF5398682193EF3900D91430 /* ProjectsResponse.swift in Sources */,
+				AF5398622193EC0500D91430 /* ProjectCell.swift in Sources */,
 				AFFDA90D219389DE006661E7 /* UImageViewExtension.swift in Sources */,
 				AFFDA90B219388B6006661E7 /* ProfileViewController.swift in Sources */,
 				AFFDA90721938866006661E7 /* OperatorsViewController.swift in Sources */,
@@ -331,6 +373,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF53986C2193EF7D00D91430 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = AF53986B2193EF7D00D91430 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AFFDA8AB219335FC006661E7 /* Main.storyboard */ = {
@@ -471,8 +521,10 @@
 		AFFDA8BA2193360B006661E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iBetterRide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -488,8 +540,10 @@
 		AFFDA8BB2193360B006661E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iBetterRide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

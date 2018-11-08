@@ -50,41 +50,6 @@
             </objects>
             <point key="canvasLocation" x="-220.28985507246378" y="1100.8928571428571"/>
         </scene>
-        <!--Projects-->
-        <scene sceneID="Fvf-lC-VFu">
-            <objects>
-                <collectionViewController id="tla-tY-cT0" customClass="ProjectsViewController" customModule="iBetterRide" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="BZY-p5-f4M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4E4-F2-kRK">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="6zo-AN-QM9">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="tla-tY-cT0" id="Ny4-JO-cXv"/>
-                            <outlet property="delegate" destination="tla-tY-cT0" id="1iR-V0-HA7"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Projects" id="kE6-7E-jNj"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZOO-tZ-nnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2784" y="139"/>
-        </scene>
         <!--Operators-->
         <scene sceneID="nP7-f6-4C6">
             <objects>
@@ -142,6 +107,7 @@
                 <tabBarController title="BetterRide" automaticallyAdjustsScrollViewInsets="NO" id="3TU-FU-iMI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cnw-2V-PkP">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -168,12 +134,88 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="tla-tY-cT0" kind="relationship" relationship="rootViewController" id="KeB-oR-K0V"/>
+                        <segue destination="3nI-YN-Rui" kind="relationship" relationship="rootViewController" id="CkL-Vk-Ik0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Kk-A4-HwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1873.913043478261" y="138.61607142857142"/>
+        </scene>
+        <!--Projects-->
+        <scene sceneID="76K-lX-aVm">
+            <objects>
+                <tableViewController id="3nI-YN-Rui" customClass="ProjectsViewController" customModule="iBetterRide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0WN-No-tx1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="68" id="j2C-RK-Qdj" customClass="ProjectCell" customModule="iBetterRide" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="68"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j2C-RK-Qdj" id="Dxd-AP-Pkl">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="67.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-91-Ku5">
+                                            <rect key="frame" x="20" y="36" width="374" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwB-Rd-Ngh">
+                                            <rect key="frame" x="20" y="11" width="374" height="24"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fwB-Rd-Ngh" firstAttribute="top" secondItem="Dxd-AP-Pkl" secondAttribute="top" constant="11" id="4ix-gq-obO"/>
+                                        <constraint firstItem="fr0-91-Ku5" firstAttribute="leading" secondItem="Dxd-AP-Pkl" secondAttribute="leading" constant="20" id="9cN-qr-Djb"/>
+                                        <constraint firstItem="fr0-91-Ku5" firstAttribute="top" secondItem="fwB-Rd-Ngh" secondAttribute="bottom" constant="1" id="Qaj-zH-KCI"/>
+                                        <constraint firstItem="fwB-Rd-Ngh" firstAttribute="centerX" secondItem="Dxd-AP-Pkl" secondAttribute="centerX" id="Z7a-xK-yVT"/>
+                                        <constraint firstItem="fr0-91-Ku5" firstAttribute="centerX" secondItem="Dxd-AP-Pkl" secondAttribute="centerX" id="Zhm-Bg-aEs"/>
+                                        <constraint firstItem="fwB-Rd-Ngh" firstAttribute="leading" secondItem="Dxd-AP-Pkl" secondAttribute="leading" constant="20" id="f6O-oM-6iy"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="fr0-91-Ku5" id="Ipe-fA-fsE"/>
+                                    <outlet property="nameLabel" destination="fwB-Rd-Ngh" id="DMS-xc-MZG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3nI-YN-Rui" id="zEW-EL-dBO"/>
+                            <outlet property="delegate" destination="3nI-YN-Rui" id="WYi-Nz-GL0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Projects" id="bj7-Wg-C8h">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="fi9-mV-oZi"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FEQ-XL-4WN"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="IrZ-RA-THD" kind="show" identifier="showProject" id="emw-vc-ktM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t4d-SG-s5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2769.5652173913045" y="138.61607142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qgi-RK-Ocw">
+            <objects>
+                <viewController id="IrZ-RA-THD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nrH-bj-yqa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Re7-V7-YLL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dU4-DO-N0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3632" y="139"/>
         </scene>
         <!--Operator-->
         <scene sceneID="Uyd-bC-a9Y">
