@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class BetterRideApi{
-    static let baseUrl = "http://srv-desa.eastus2.cloudapp.azure.com/appbetterride/api/v1"
+    static let baseUrl = "https://srv-desa.eastus2.cloudapp.azure.com/appbetterride/api/v1"
     static let getProjectsUrl = "\(baseUrl)/projects/supervisors/1"
     
     static func handleError(error: Error){
@@ -23,11 +23,14 @@ class BetterRideApi{
         responseType: T.Type,
         responseHandler: @escaping ((T)-> (Void)),
         errorHandler: (@escaping (Error) -> (Void)) = handleError){
-        Alamofire.request(urlString, headers: headers)
+        Alamofire.request(urlString,
+                          method: .get,
+                          headers: headers)
             .validate()
             .responseJSON(completionHandler: { (response) in
                 switch response.result {
                 case .success(let value):
+                    print("\(value)")
                     do{
                         let data = try
                             JSONSerialization.data(withJSONObject: value,

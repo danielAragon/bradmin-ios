@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ProjectsViewController: UITableViewController {
+private let reuseIdentifier = "Cell"
 
+class ProjectsViewController: UITableViewController {
+    var projects: [Project] = [Project]()
+    var currentRow = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        BetterRideApi.getProject(responseHandler: self.handleResponse,
+                                 errorHandler: self.handleError)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -21,27 +27,36 @@ class ProjectsViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
+    func handleResponse(response: ProjectsResponse){
+        if response.code != "200"{
+            print("Error in response: \(response.message!)")
+            return
+        }
+        if let projects = response.projects {
+            self.projects = projects
+            self.tableView.reloadData()
+        }
+        print("Sources count: \(response.projects!.count)")
+    }
+    
+    func handleError(error: Error){
+        print("Error while requesting Projects: \(error.localizedDescription)")
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.projects.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ProjectCell
+        cell.update(from: projects[indexPath.row])
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

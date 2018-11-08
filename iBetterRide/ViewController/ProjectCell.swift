@@ -23,5 +23,9 @@ class ProjectCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func update(from project: Project){
+        nameLabel.text = project.name
+        dateLabel.text = (project.date)!.padding(toLength: 10, withPad: "0", startingAt: 0)
+    }
 }
