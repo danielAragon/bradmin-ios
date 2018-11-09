@@ -74,7 +74,6 @@ class OperatorsViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentRow = indexPath.row
-        self.performSegue(withIdentifier: "showOperator", sender: self)
     }
   
 
