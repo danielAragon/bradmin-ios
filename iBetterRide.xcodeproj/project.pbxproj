@@ -14,13 +14,14 @@
 		AF5398682193EF3900D91430 /* ProjectsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5398672193EF3900D91430 /* ProjectsResponse.swift */; };
 		AF5398692193EF7D00D91430 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFDA8D121933AA3006661E7 /* Alamofire.framework */; };
 		AF53986A2193EF7D00D91430 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFFDA8D121933AA3006661E7 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF6756382194E0ED00D5E52C /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6756372194E0ED00D5E52C /* ProjectViewController.swift */; };
+		AF67563A2194F35700D5E52C /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6756392194F35700D5E52C /* AddProjectViewController.swift */; };
 		AFFDA8A8219335FC006661E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA8A7219335FC006661E7 /* AppDelegate.swift */; };
 		AFFDA8AA219335FC006661E7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA8A9219335FC006661E7 /* WelcomeViewController.swift */; };
 		AFFDA8AD219335FC006661E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFDA8AB219335FC006661E7 /* Main.storyboard */; };
 		AFFDA8B0219335FC006661E7 /* iBetterRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA8AE219335FC006661E7 /* iBetterRide.xcdatamodeld */; };
 		AFFDA8B22193360B006661E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFFDA8B12193360B006661E7 /* Assets.xcassets */; };
 		AFFDA8B52193360B006661E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFDA8B32193360B006661E7 /* LaunchScreen.storyboard */; };
-		AFFDA90721938866006661E7 /* OperatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA90621938866006661E7 /* OperatorsViewController.swift */; };
 		AFFDA9092193888D006661E7 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */; };
 		AFFDA90B219388B6006661E7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA90A219388B6006661E7 /* ProfileViewController.swift */; };
 		AFFDA90D219389DE006661E7 /* UImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA90C219389DE006661E7 /* UImageViewExtension.swift */; };
@@ -105,6 +106,8 @@
 		AF5398632193ED9B00D91430 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		AF5398652193EF2200D91430 /* BetterRideApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRideApi.swift; sourceTree = "<group>"; };
 		AF5398672193EF3900D91430 /* ProjectsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsResponse.swift; sourceTree = "<group>"; };
+		AF6756372194E0ED00D5E52C /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		AF6756392194F35700D5E52C /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		AFFDA8A4219335FC006661E7 /* iBetterRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBetterRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFDA8A7219335FC006661E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFFDA8A9219335FC006661E7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +117,6 @@
 		AFFDA8B42193360B006661E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFFDA8B62193360B006661E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFFDA8C521933AA3006661E7 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		AFFDA90621938866006661E7 /* OperatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsViewController.swift; sourceTree = "<group>"; };
 		AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		AFFDA90A219388B6006661E7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AFFDA90C219389DE006661E7 /* UImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UImageViewExtension.swift; sourceTree = "<group>"; };
@@ -166,12 +168,13 @@
 			isa = PBXGroup;
 			children = (
 				AFFDA8A9219335FC006661E7 /* WelcomeViewController.swift */,
-				AFFDA90621938866006661E7 /* OperatorsViewController.swift */,
 				AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */,
 				AFFDA90A219388B6006661E7 /* ProfileViewController.swift */,
 				AFFDA90C219389DE006661E7 /* UImageViewExtension.swift */,
 				AF53985F2193E88700D91430 /* ProjectsViewController.swift */,
 				AF5398612193EC0500D91430 /* ProjectCell.swift */,
+				AF6756372194E0ED00D5E52C /* ProjectViewController.swift */,
+				AF6756392194F35700D5E52C /* AddProjectViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -357,9 +360,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF67563A2194F35700D5E52C /* AddProjectViewController.swift in Sources */,
 				AF5398602193E88700D91430 /* ProjectsViewController.swift in Sources */,
 				AFFDA8AA219335FC006661E7 /* WelcomeViewController.swift in Sources */,
 				AFFDA8B0219335FC006661E7 /* iBetterRide.xcdatamodeld in Sources */,
+				AF6756382194E0ED00D5E52C /* ProjectViewController.swift in Sources */,
 				AF5398662193EF2200D91430 /* BetterRideApi.swift in Sources */,
 				AF5398642193ED9B00D91430 /* Project.swift in Sources */,
 				AFFDA8A8219335FC006661E7 /* AppDelegate.swift in Sources */,
@@ -367,7 +372,6 @@
 				AF5398622193EC0500D91430 /* ProjectCell.swift in Sources */,
 				AFFDA90D219389DE006661E7 /* UImageViewExtension.swift in Sources */,
 				AFFDA90B219388B6006661E7 /* ProfileViewController.swift in Sources */,
-				AFFDA90721938866006661E7 /* OperatorsViewController.swift in Sources */,
 				AFFDA9092193888D006661E7 /* AnalyticsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
