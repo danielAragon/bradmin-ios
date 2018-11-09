@@ -269,9 +269,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="486-0R-Zxe">
-                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="sor-nE-aiR">
+                        <barButtonItem key="rightBarButtonItem" title="Add" style="plain" id="sor-nE-aiR">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mlc-Sq-vfy">
-                                <rect key="frame" x="-23" y="-15" width="92" height="30"/>
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
