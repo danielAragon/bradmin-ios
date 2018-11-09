@@ -2,7 +2,7 @@
 //  OperatorsViewController.swift
 //  iBetterRide
 //
-//  Created by Silvana Stipetich Santillán on 11/7/18.
+//  Created by Mauricio Rivas Arroyo on 11/8/18.
 //  Copyright © 2018 Better Ride. All rights reserved.
 //
 
@@ -10,80 +10,69 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class OperatorsViewController: UICollectionViewController {
+class OperatorsViewController: UITableViewController {
 
+    var operators: [Operator] = [Operator]()
+    var currentRow = 0  
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        BetterRideApi.getOperator(responseHandler: self.handleResponse,
+                                 errorHandler: self.handleError)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    /*
-    // MARK: - Navigation
+    // MARK: - Table view data source
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    
+    func handleResponse(response: OperatorResponse){
+        if response.code != "200"{
+            print("Error in response: \(response.message!)")
+            return
+        }
+        if let operators = response.operators {
+            self.operators =  operators
+            self.tableView.reloadData()
+        }
+        print("Operators count: \(response.operators!.count)")
     }
-    */
+    
+    func handleError(error: Error){
+        print("Error while requesting Operators: \(error.localizedDescription)")
+    }
 
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return self.operators.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
-        // Configure the cell
-    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! OperatorCell
+
+        cell.update(from: operators[indexPath.row]))
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showOperator"{
+            let destination = segue.destination as! OperatorController
+            destination.op
+        }
     }
 
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
+  
 
 }

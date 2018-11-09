@@ -20,10 +20,14 @@
 		AFFDA8B0219335FC006661E7 /* iBetterRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA8AE219335FC006661E7 /* iBetterRide.xcdatamodeld */; };
 		AFFDA8B22193360B006661E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFFDA8B12193360B006661E7 /* Assets.xcassets */; };
 		AFFDA8B52193360B006661E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFDA8B32193360B006661E7 /* LaunchScreen.storyboard */; };
-		AFFDA90721938866006661E7 /* OperatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA90621938866006661E7 /* OperatorsViewController.swift */; };
 		AFFDA9092193888D006661E7 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */; };
 		AFFDA90B219388B6006661E7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA90A219388B6006661E7 /* ProfileViewController.swift */; };
 		AFFDA90D219389DE006661E7 /* UImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA90C219389DE006661E7 /* UImageViewExtension.swift */; };
+		F4EBE5112194EE410058D44D /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EBE5102194EE410058D44D /* Operator.swift */; };
+		F4EBE51A2194F3020058D44D /* OperatorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EBE5192194F3020058D44D /* OperatorResponse.swift */; };
+		F4EBE51C2195009E0058D44D /* OperatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EBE51B2195009E0058D44D /* OperatorsViewController.swift */; };
+		F4EBE51E219506430058D44D /* OperatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EBE51D219506430058D44D /* OperatorCell.swift */; };
+		F4EBE52D219527290058D44D /* OperatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EBE52C219527290058D44D /* OperatorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,10 +118,14 @@
 		AFFDA8B42193360B006661E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFFDA8B62193360B006661E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFFDA8C521933AA3006661E7 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		AFFDA90621938866006661E7 /* OperatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsViewController.swift; sourceTree = "<group>"; };
 		AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		AFFDA90A219388B6006661E7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AFFDA90C219389DE006661E7 /* UImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UImageViewExtension.swift; sourceTree = "<group>"; };
+		F4EBE5102194EE410058D44D /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
+		F4EBE5192194F3020058D44D /* OperatorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorResponse.swift; sourceTree = "<group>"; };
+		F4EBE51B2195009E0058D44D /* OperatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsViewController.swift; sourceTree = "<group>"; };
+		F4EBE51D219506430058D44D /* OperatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorCell.swift; sourceTree = "<group>"; };
+		F4EBE52C219527290058D44D /* OperatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,12 +174,14 @@
 			isa = PBXGroup;
 			children = (
 				AFFDA8A9219335FC006661E7 /* WelcomeViewController.swift */,
-				AFFDA90621938866006661E7 /* OperatorsViewController.swift */,
 				AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */,
 				AFFDA90A219388B6006661E7 /* ProfileViewController.swift */,
 				AFFDA90C219389DE006661E7 /* UImageViewExtension.swift */,
 				AF53985F2193E88700D91430 /* ProjectsViewController.swift */,
 				AF5398612193EC0500D91430 /* ProjectCell.swift */,
+				F4EBE51B2195009E0058D44D /* OperatorsViewController.swift */,
+				F4EBE51D219506430058D44D /* OperatorCell.swift */,
+				F4EBE52C219527290058D44D /* OperatorViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -191,6 +201,7 @@
 			children = (
 				AF5398652193EF2200D91430 /* BetterRideApi.swift */,
 				AF5398672193EF3900D91430 /* ProjectsResponse.swift */,
+				F4EBE5192194F3020058D44D /* OperatorResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -200,6 +211,7 @@
 			children = (
 				AFFDA8AE219335FC006661E7 /* iBetterRide.xcdatamodeld */,
 				AF5398632193ED9B00D91430 /* Project.swift */,
+				F4EBE5102194EE410058D44D /* Operator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -359,15 +371,19 @@
 			files = (
 				AF5398602193E88700D91430 /* ProjectsViewController.swift in Sources */,
 				AFFDA8AA219335FC006661E7 /* WelcomeViewController.swift in Sources */,
+				F4EBE52D219527290058D44D /* OperatorViewController.swift in Sources */,
+				F4EBE5112194EE410058D44D /* Operator.swift in Sources */,
 				AFFDA8B0219335FC006661E7 /* iBetterRide.xcdatamodeld in Sources */,
 				AF5398662193EF2200D91430 /* BetterRideApi.swift in Sources */,
 				AF5398642193ED9B00D91430 /* Project.swift in Sources */,
 				AFFDA8A8219335FC006661E7 /* AppDelegate.swift in Sources */,
 				AF5398682193EF3900D91430 /* ProjectsResponse.swift in Sources */,
+				F4EBE51C2195009E0058D44D /* OperatorsViewController.swift in Sources */,
+				F4EBE51A2194F3020058D44D /* OperatorResponse.swift in Sources */,
+				F4EBE51E219506430058D44D /* OperatorCell.swift in Sources */,
 				AF5398622193EC0500D91430 /* ProjectCell.swift in Sources */,
 				AFFDA90D219389DE006661E7 /* UImageViewExtension.swift in Sources */,
 				AFFDA90B219388B6006661E7 /* ProfileViewController.swift in Sources */,
-				AFFDA90721938866006661E7 /* OperatorsViewController.swift in Sources */,
 				AFFDA9092193888D006661E7 /* AnalyticsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,9 @@ class BetterRideApi{
     static let baseUrl = "https://srv-desa.eastus2.cloudapp.azure.com/appbetterride/api/v1"
     static let getProjectsUrl = "\(baseUrl)/projects/supervisors/1"
     
+    static let getOperatorsUrl = "\(baseUrl)/userSession/organizations/1"
+
+    
     static func handleError(error: Error){
         print("Error while requesting Data: \(error.localizedDescription)")
     }
@@ -57,4 +60,14 @@ class BetterRideApi{
                  responseHandler: responseHandler,
                  errorHandler: errorHandler)
     }
+    static func getOperator(responseHandler: @escaping (OperatorResponse) -> (Void),
+                           errorHandler: @escaping (Error) -> (Void)){
+        let headers = ["token": "FG5325YGJM35"]
+        self.get(urlString: getOperatorsUrl,
+                 headers: headers,
+                 responseType: OperatorResponse.self,
+                 responseHandler: responseHandler,
+                 errorHandler: errorHandler)
+    }
+    
 }
