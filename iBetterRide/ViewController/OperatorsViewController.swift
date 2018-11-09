@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "OperatorCell"
 
 class OperatorsViewController: UITableViewController {
 
@@ -65,7 +65,7 @@ class OperatorsViewController: UITableViewController {
 
         cell.update(from: operators[indexPath.row])
         return cell
-    }/*
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showOperator"{
             let destination = segue.destination as! OperatorViewController
@@ -75,7 +75,7 @@ class OperatorsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentRow = indexPath.row
         self.performSegue(withIdentifier: "showOperator", sender: self)
-    }*/
+    }
   
 
 }
