@@ -104,5 +104,17 @@ class ProjectsViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
+        if segue.identifier == "showProject" {
+            let destination = segue.destination as! ProjectViewController
+            destination.project = projects[currentRow]
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView,
+                            didSelectRowAt indexPath: IndexPath) {
+        currentRow = indexPath.row
+        self.performSegue(withIdentifier: "showProject", sender: self)
+    }
 }

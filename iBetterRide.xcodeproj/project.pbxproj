@@ -14,6 +14,8 @@
 		AF5398682193EF3900D91430 /* ProjectsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5398672193EF3900D91430 /* ProjectsResponse.swift */; };
 		AF5398692193EF7D00D91430 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFDA8D121933AA3006661E7 /* Alamofire.framework */; };
 		AF53986A2193EF7D00D91430 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFFDA8D121933AA3006661E7 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF6756382194E0ED00D5E52C /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6756372194E0ED00D5E52C /* ProjectViewController.swift */; };
+		AF67563A2194F35700D5E52C /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6756392194F35700D5E52C /* AddProjectViewController.swift */; };
 		AFFDA8A8219335FC006661E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA8A7219335FC006661E7 /* AppDelegate.swift */; };
 		AFFDA8AA219335FC006661E7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA8A9219335FC006661E7 /* WelcomeViewController.swift */; };
 		AFFDA8AD219335FC006661E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFDA8AB219335FC006661E7 /* Main.storyboard */; };
@@ -109,6 +111,8 @@
 		AF5398632193ED9B00D91430 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		AF5398652193EF2200D91430 /* BetterRideApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRideApi.swift; sourceTree = "<group>"; };
 		AF5398672193EF3900D91430 /* ProjectsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsResponse.swift; sourceTree = "<group>"; };
+		AF6756372194E0ED00D5E52C /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		AF6756392194F35700D5E52C /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		AFFDA8A4219335FC006661E7 /* iBetterRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBetterRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFDA8A7219335FC006661E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFFDA8A9219335FC006661E7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 				F4EBE51B2195009E0058D44D /* OperatorsViewController.swift */,
 				F4EBE51D219506430058D44D /* OperatorCell.swift */,
 				F4EBE52C219527290058D44D /* OperatorViewController.swift */,
+				AF6756372194E0ED00D5E52C /* ProjectViewController.swift */,
+				AF6756392194F35700D5E52C /* AddProjectViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -369,11 +375,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF67563A2194F35700D5E52C /* AddProjectViewController.swift in Sources */,
 				AF5398602193E88700D91430 /* ProjectsViewController.swift in Sources */,
 				AFFDA8AA219335FC006661E7 /* WelcomeViewController.swift in Sources */,
 				F4EBE52D219527290058D44D /* OperatorViewController.swift in Sources */,
 				F4EBE5112194EE410058D44D /* Operator.swift in Sources */,
 				AFFDA8B0219335FC006661E7 /* iBetterRide.xcdatamodeld in Sources */,
+				AF6756382194E0ED00D5E52C /* ProjectViewController.swift in Sources */,
 				AF5398662193EF2200D91430 /* BetterRideApi.swift in Sources */,
 				AF5398642193ED9B00D91430 /* Project.swift in Sources */,
 				AFFDA8A8219335FC006661E7 /* AppDelegate.swift in Sources */,
