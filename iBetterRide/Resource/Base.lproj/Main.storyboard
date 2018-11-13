@@ -223,13 +223,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Project name" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NV9-nq-vBy">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NV9-nq-vBy">
                                 <rect key="frame" x="20" y="110" width="374" height="30"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Project date" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsh-DS-XWv">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsh-DS-XWv">
                                 <rect key="frame" x="20" y="160" width="374" height="30"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -248,9 +248,21 @@
                         <viewLayoutGuide key="safeArea" id="2V0-ao-zwp"/>
                     </view>
                     <navigationItem key="navigationItem" id="Yyg-67-3Je">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8vC-w1-8CG"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fHo-sA-qem"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8vC-w1-8CG">
+                            <connections>
+                                <action selector="cancelAction:" destination="gD1-Al-wtj" id="11t-zB-syq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fHo-sA-qem">
+                            <connections>
+                                <action selector="doneAction:" destination="gD1-Al-wtj" id="B4j-eX-H9N"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateTextField" destination="hsh-DS-XWv" id="TQl-RN-dSZ"/>
+                        <outlet property="nameTextField" destination="NV9-nq-vBy" id="Gvn-d0-MC3"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="4507.2463768115949" y="-548.4375"/>
