@@ -14,6 +14,11 @@
 		AF5398682193EF3900D91430 /* ProjectsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5398672193EF3900D91430 /* ProjectsResponse.swift */; };
 		AF5398692193EF7D00D91430 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFDA8D121933AA3006661E7 /* Alamofire.framework */; };
 		AF53986A2193EF7D00D91430 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFFDA8D121933AA3006661E7 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF572398219C89B8003D2597 /* SessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF572397219C89B8003D2597 /* SessionCell.swift */; };
+		AF5723A1219C8E05003D2597 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5723A0219C8E05003D2597 /* Session.swift */; };
+		AF5723A3219C9327003D2597 /* SessionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5723A2219C9327003D2597 /* SessionsResponse.swift */; };
+		AF5723A5219CCF61003D2597 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5723A4219CCF61003D2597 /* SessionViewController.swift */; };
+		AF5723A7219CE800003D2597 /* AddSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5723A6219CE800003D2597 /* AddSessionViewController.swift */; };
 		AF6756382194E0ED00D5E52C /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6756372194E0ED00D5E52C /* ProjectViewController.swift */; };
 		AF67563A2194F35700D5E52C /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6756392194F35700D5E52C /* AddProjectViewController.swift */; };
 		AF67563C2195366000D5E52C /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF67563B2195366000D5E52C /* PostResponse.swift */; };
@@ -107,6 +112,11 @@
 		AF5398632193ED9B00D91430 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		AF5398652193EF2200D91430 /* BetterRideApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRideApi.swift; sourceTree = "<group>"; };
 		AF5398672193EF3900D91430 /* ProjectsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsResponse.swift; sourceTree = "<group>"; };
+		AF572397219C89B8003D2597 /* SessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCell.swift; sourceTree = "<group>"; };
+		AF5723A0219C8E05003D2597 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		AF5723A2219C9327003D2597 /* SessionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsResponse.swift; sourceTree = "<group>"; };
+		AF5723A4219CCF61003D2597 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
+		AF5723A6219CE800003D2597 /* AddSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionViewController.swift; sourceTree = "<group>"; };
 		AF6756372194E0ED00D5E52C /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		AF6756392194F35700D5E52C /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		AF67563B2195366000D5E52C /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
@@ -177,6 +187,9 @@
 				AF5398612193EC0500D91430 /* ProjectCell.swift */,
 				AF6756372194E0ED00D5E52C /* ProjectViewController.swift */,
 				AF6756392194F35700D5E52C /* AddProjectViewController.swift */,
+				AF572397219C89B8003D2597 /* SessionCell.swift */,
+				AF5723A4219CCF61003D2597 /* SessionViewController.swift */,
+				AF5723A6219CE800003D2597 /* AddSessionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -197,6 +210,7 @@
 				AF5398652193EF2200D91430 /* BetterRideApi.swift */,
 				AF5398672193EF3900D91430 /* ProjectsResponse.swift */,
 				AF67563B2195366000D5E52C /* PostResponse.swift */,
+				AF5723A2219C9327003D2597 /* SessionsResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -206,6 +220,7 @@
 			children = (
 				AFFDA8AE219335FC006661E7 /* iBetterRide.xcdatamodeld */,
 				AF5398632193ED9B00D91430 /* Project.swift */,
+				AF5723A0219C8E05003D2597 /* Session.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -365,15 +380,20 @@
 			files = (
 				AF67563A2194F35700D5E52C /* AddProjectViewController.swift in Sources */,
 				AF5398602193E88700D91430 /* ProjectsViewController.swift in Sources */,
+				AF572398219C89B8003D2597 /* SessionCell.swift in Sources */,
+				AF5723A5219CCF61003D2597 /* SessionViewController.swift in Sources */,
 				AFFDA8AA219335FC006661E7 /* WelcomeViewController.swift in Sources */,
 				AFFDA8B0219335FC006661E7 /* iBetterRide.xcdatamodeld in Sources */,
 				AF6756382194E0ED00D5E52C /* ProjectViewController.swift in Sources */,
+				AF5723A3219C9327003D2597 /* SessionsResponse.swift in Sources */,
 				AF5398662193EF2200D91430 /* BetterRideApi.swift in Sources */,
 				AF5398642193ED9B00D91430 /* Project.swift in Sources */,
 				AFFDA8A8219335FC006661E7 /* AppDelegate.swift in Sources */,
 				AF67563C2195366000D5E52C /* PostResponse.swift in Sources */,
+				AF5723A7219CE800003D2597 /* AddSessionViewController.swift in Sources */,
 				AF5398682193EF3900D91430 /* ProjectsResponse.swift in Sources */,
 				AF5398622193EC0500D91430 /* ProjectCell.swift in Sources */,
+				AF5723A1219C8E05003D2597 /* Session.swift in Sources */,
 				AFFDA90D219389DE006661E7 /* UImageViewExtension.swift in Sources */,
 				AFFDA90B219388B6006661E7 /* ProfileViewController.swift in Sources */,
 				AFFDA9092193888D006661E7 /* AnalyticsViewController.swift in Sources */,
@@ -532,7 +552,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93ZF29F58P;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iBetterRide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -552,7 +572,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93ZF29F58P;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iBetterRide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (

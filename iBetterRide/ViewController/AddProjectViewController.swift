@@ -25,11 +25,6 @@ class AddProjectViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
         
         dateTextField.inputView = datePicker
-        project.id = ""
-        project.name = nameTextField.text
-        project.date = "2018-11-23"
-        project.supervisor_id = "1"
-        project.num_session = 0
     }
     
     @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
@@ -62,15 +57,20 @@ class AddProjectViewController: UIViewController {
     func handleError(error: Error){
         print("Error while requesting AddProject: \(error.localizedDescription)")
     }
-    
+  
     @IBAction func doneAction(_ sender: UIBarButtonItem) {
-        BetterRideApi.postProject(fromProject: project,
-                                  responseHandler: handleResponse.self,
-                                  errorHandler: handleError.self)
+        project.id = ""
+        project.name = nameTextField.text
+        project.date = dateTextField.text
+        project.supervisor_id = "1"
+        project.num_session = 0
+        BetterRideApi.postProject(fromProject: project)
         dismiss(animated: true, completion: nil)
+        
     }
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
+    
 }

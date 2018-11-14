@@ -57,15 +57,11 @@ class ProjectsViewController: UITableViewController {
         return cell
     }
  
-
-    /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
-
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -104,6 +100,11 @@ class ProjectsViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func editButton(_ sender: UIBarButtonItem) {
+        self.isEditing = !self.isEditing
+    }
+    
     override func prepare(for segue: UIStoryboardSegue,
                           sender: Any?) {
         if segue.identifier == "showProject" {
