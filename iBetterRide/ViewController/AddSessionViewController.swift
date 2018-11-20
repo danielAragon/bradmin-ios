@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol AddSessionViewControllerDelegate {
+    func controller(controller: AddSessionViewController, session: Session)
+}
+
 class AddSessionViewController: UIViewController {
 
     @IBOutlet weak var dateTextField: UITextField!
@@ -19,6 +23,7 @@ class AddSessionViewController: UIViewController {
     private var hourPicker: UIDatePicker?
     var session = Session()
     var project_id : String?
+    var delegate: AddSessionViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +89,9 @@ class AddSessionViewController: UIViewController {
         session.status = "pen"
         session.project_id = project_id!
         BetterRideApi.postSession(fromSession: session)
+        if let delegate = self.delegate {
+            delegate.controller(controller: self, session: session)
+        }
         self.dismiss(animated: true, completion: nil)
     }
     

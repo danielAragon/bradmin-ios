@@ -8,12 +8,16 @@
 
 import UIKit
 
-class AddProjectViewController: UIViewController {
+protocol AddProjectViewControllerDelegate {
+    func controller(controller: AddProjectViewController, project: Project)
+}
 
+class AddProjectViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
     private var datePicker: UIDatePicker?
     var project = Project()
+    var delegate: AddProjectViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +53,16 @@ class AddProjectViewController: UIViewController {
   
     
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
+    
         project.id = ""
         project.name = nameTextField.text
         project.date = dateTextField.text
         project.supervisor_id = "1"
         project.num_session = 0
         BetterRideApi.postProject(fromProject: project)
+        if let delegate = self.delegate {
+            delegate.controller(controller: self, project: project)
+        }
         dismiss(animated: true, completion: nil)
     }
     

@@ -10,7 +10,12 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddSessionViewControllerDelegate {
+    func controller(controller: AddSessionViewController, session: Session) {
+        self.sessions.append(session)
+        self.tableView.reloadData()
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -74,18 +79,22 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
+            if(sessions[indexPath.row].status != "rea"){
+                sessions.remove(at: indexPath.row)
+                self.tableView.reloadData()
+            }else {
+                let alert = UIAlertController(title: "Denied Action", message: "Unable to delete an initiated session.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+        } 
     }
 
     @IBAction func editButton(_ sender: UIBarButtonItem) {
         self.tableView.isEditing = !self.tableView.isEditing
     }
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showSession" {
             let destination = segue.destination as! SessionViewController
@@ -93,6 +102,7 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         if segue.identifier == "showAddSession" {
             let destination = segue.destination as! AddSessionViewController
+            destination.delegate = self
             destination.project_id = project?.id!
         }
     }

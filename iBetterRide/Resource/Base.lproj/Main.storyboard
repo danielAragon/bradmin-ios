@@ -207,7 +207,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FEQ-XL-4WN">
                             <connections>
-                                <segue destination="gD1-Al-wtj" kind="presentation" id="5bI-0B-163"/>
+                                <segue destination="gD1-Al-wtj" kind="presentation" identifier="showAddProject" id="5bI-0B-163"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -504,7 +504,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZRv-RU-0ee">
                                             <connections>
-                                                <segue destination="ycp-fJ-cZ2" kind="presentation" id="geF-Qu-6v0"/>
+                                                <segue destination="ycp-fJ-cZ2" kind="presentation" identifier="showAddSession" id="geF-Qu-6v0"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
