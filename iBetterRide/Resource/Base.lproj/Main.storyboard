@@ -333,7 +333,11 @@
                                                 <action selector="cancelAction:" destination="ycp-fJ-cZ2" id="Hxj-Yb-INK"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="egY-Zv-4KC"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="egY-Zv-4KC">
+                                            <connections>
+                                                <action selector="saveAction:" destination="ycp-fJ-cZ2" id="7N0-oK-1gJ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -368,11 +372,7 @@
                         <viewLayoutGuide key="safeArea" id="rti-xD-72u"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Session" id="WUx-dJ-yRX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Ewh-HT-RVu">
-                            <connections>
-                                <action selector="saveAction:" destination="ycp-fJ-cZ2" id="wH6-7Z-sGx"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Ewh-HT-RVu"/>
                     </navigationItem>
                     <connections>
                         <outlet property="avenueFirstTextField" destination="fED-4t-PRE" id="hGp-TG-mjY"/>

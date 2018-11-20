@@ -41,28 +41,19 @@ class AddProjectViewController: UIViewController {
         dateTextField.text = dateFormatter.string(from: datePicker.date)
         view.endEditing(true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-  
-    
+   
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
-    
-        project.id = ""
-        project.name = nameTextField.text
-        project.date = dateTextField.text
-        project.supervisor_id = "1"
-        project.num_session = 0
-        BetterRideApi.postProject(fromProject: project)
-        if let delegate = self.delegate {
-            delegate.controller(controller: self, project: project)
-        }
+        if (nameTextField.text != "" && dateTextField.text != "") {
+                project.id = ""
+                project.name = nameTextField.text
+                project.date = dateTextField.text
+                project.supervisor_id = "1"
+                project.num_session = 0
+                BetterRideApi.postProject(fromProject: project)
+                if let delegate = self.delegate {
+                    delegate.controller(controller: self, project: project)
+                }
+            }
         dismiss(animated: true, completion: nil)
     }
     

@@ -21,6 +21,7 @@ class AddSessionViewController: UIViewController {
     @IBOutlet weak var avenueSecondTextField: UITextField!
     private var datePicker: UIDatePicker?
     private var hourPicker: UIDatePicker?
+    private var hourPickerSecond: UIDatePicker?
     var session = Session()
     var project_id : String?
     var delegate: AddSessionViewControllerDelegate?
@@ -37,23 +38,32 @@ class AddSessionViewController: UIViewController {
         
         hourPicker = UIDatePicker()
         hourPicker?.datePickerMode = .time
-        hourPicker?.addTarget(self, action: #selector(AddSessionViewController.startTimeDiveChanged(sender:)), for: .valueChanged)
+        hourPicker?.addTarget(self, action: #selector(AddSessionViewController.startTimeDiveChangedFirst(sender:)), for: .valueChanged)
         view.addGestureRecognizer(tapGesture)
+        
+        hourPickerSecond = UIDatePicker()
+        hourPickerSecond?.datePickerMode = .time
+        hourPickerSecond?.addTarget(self, action: #selector(AddSessionViewController.startTimeDiveChangedSecond(sender:)), for: .valueChanged)
+        view.addGestureRecognizer(tapGesture)
+        
         startedTextField.inputView = hourPicker
-        finishedTextField.inputView = hourPicker
+        finishedTextField.inputView = hourPickerSecond
         
     }
     
-    @objc func startTimeDiveChanged(sender: UIDatePicker) {
+    @objc func startTimeDiveChangedFirst(sender: UIDatePicker) {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
         formatter.dateFormat = "HH:mm"
-        if startedTextField.isFocused == true {
-            startedTextField.text = formatter.string(from: sender.date)
-        }
-        if finishedTextField.isFocused == true {
-            finishedTextField.text = formatter.string(from: sender.date)
-        }
+        startedTextField.text = formatter.string(from: sender.date)
+        view.endEditing(true)
+    }
+    
+    @objc func startTimeDiveChangedSecond(sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        formatter.dateFormat = "HH:mm"
+        finishedTextField.text = formatter.string(from: sender.date)
         view.endEditing(true)
     }
     
@@ -68,29 +78,24 @@ class AddSessionViewController: UIViewController {
         view.endEditing(true)
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
-        session.id = ""
-        session.date = dateTextField.text
-        session.started_at = startedTextField.text
-        session.finished_at = finishedTextField.text
-        session.avenue_first = avenueFirstTextField.text
-        session.avenue_second = avenueSecondTextField.text
-        session.status = "pen"
-        session.project_id = project_id!
-        BetterRideApi.postSession(fromSession: session)
-        if let delegate = self.delegate {
-            delegate.controller(controller: self, session: session)
+        if (dateTextField.text != "" &&
+            startedTextField.text != "" &&
+            finishedTextField.text != "" &&
+            avenueFirstTextField.text != "" &&
+            avenueSecondTextField.text != ""){
+                session.id = ""
+                session.date = dateTextField.text
+                session.started_at = startedTextField.text
+                session.finished_at = finishedTextField.text
+                session.avenue_first = avenueFirstTextField.text
+                session.avenue_second = avenueSecondTextField.text
+                session.status = "pen"
+                session.project_id = project_id!
+                BetterRideApi.postSession(fromSession: session)
+                if let delegate = self.delegate {
+                    delegate.controller(controller: self, session: session)
+                }
         }
         self.dismiss(animated: true, completion: nil)
     }
