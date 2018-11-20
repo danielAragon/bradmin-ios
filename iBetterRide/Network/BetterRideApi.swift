@@ -15,9 +15,9 @@ class BetterRideApi{
     static let postProjectUrl = "\(baseUrl)/project"
     static let getSessionsUrl = "\(baseUrl)/sessions/projects"
     static let postSessionUrl = "\(baseUrl)/session"
-    
+    static let getSupervisorUrl = "\(baseUrl)/users/1"
     static let getOperatorsUrl = "\(baseUrl)/userSession/organizations/1"
-
+    static let postProfileSupervisorUrl = "\(baseUrl)/supervisors"
     
     static func handleError(error: Error){
         print("Error while requesting Data: \(error.localizedDescription)")
@@ -146,4 +146,43 @@ class BetterRideApi{
                  errorHandler: errorHandler)
     }
     
+    static func getSupervisor(responseHandler: @escaping (SupervisorResponse) -> (Void),
+                            errorHandler: @escaping (Error) -> (Void)){
+        let headers = ["token": "FG5325YGJM35"]
+        self.get(urlString: getSupervisorUrl,
+                 headers: headers,
+                 responseType: SupervisorResponse.self,
+                 responseHandler: responseHandler,
+                 errorHandler: errorHandler)
+    }
+    
+    static func postProfileSupervisor(fromSession supervisor: Supervisor?){
+        guard let endpointUrl = URL(string: postProfileSupervisorUrl) else {
+            print("Failed at url")
+            return
+        }
+        do {
+            let jsonEncoder = JSONEncoder ()
+            let body = try jsonEncoder.encode(supervisor!)
+            var request = URLRequest(url: (endpointUrl))
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue("application/json", forHTTPHeaderField: "Accept")
+            request.addValue("FG5325YGJM35", forHTTPHeaderField: "token")
+            request.httpMethod = "POST"
+            request.httpBody = body
+            print("\(request)")
+            let task = URLSession.shared.dataTask(with: request){
+                (data, response, error) in
+                guard let _: Data = data, let _: URLResponse = response, error == nil else {
+                    print("error")
+                    return
+                }
+                let dataString = String(data: data!, encoding: String.Encoding.utf8)
+                print("\(dataString!)")
+            }
+            task.resume()
+        }catch{
+            print("error")
+        }
+    }
 }

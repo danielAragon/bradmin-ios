@@ -41,8 +41,21 @@ class SessionViewController: UIViewController {
             }
         }
     }
+    /*
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
     
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }*/
+    
+    @IBAction func addSessionOperatorAction(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func editSessionOperatorAction(_ sender: UIBarButtonItem) {
+    }
+    
     /*
     // MARK: - Navigation
 
