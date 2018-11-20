@@ -41,7 +41,7 @@ class ProfileViewController: UIViewController {
             photoImageView.setImage(fromUrlString: (supervisor.photo)!,
                                     withDefaultNamed: "operatorPlaceHolder",
                                     withErrornamed: "operatorPlaceHolder")
-            nameTextField.text = supervisor.id
+            nameTextField.text = supervisor.name
             lastNameTextField.text = supervisor.last_name
             emailTextField.text = supervisor.email
             usernameTextField.text = supervisor.username
