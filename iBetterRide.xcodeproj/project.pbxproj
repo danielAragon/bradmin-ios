@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF4EEE3121A49F04007C1DFD /* Supervisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EEE3021A49F04007C1DFD /* Supervisor.swift */; };
+		AF4EEE3A21A4A243007C1DFD /* SupervisorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EEE3921A4A243007C1DFD /* SupervisorResponse.swift */; };
 		AF5398602193E88700D91430 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF53985F2193E88700D91430 /* ProjectsViewController.swift */; };
 		AF5398622193EC0500D91430 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5398612193EC0500D91430 /* ProjectCell.swift */; };
 		AF5398642193ED9B00D91430 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5398632193ED9B00D91430 /* Project.swift */; };
@@ -112,6 +114,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF4EEE3021A49F04007C1DFD /* Supervisor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supervisor.swift; sourceTree = "<group>"; };
+		AF4EEE3921A4A243007C1DFD /* SupervisorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupervisorResponse.swift; sourceTree = "<group>"; };
 		AF53985F2193E88700D91430 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		AF5398612193EC0500D91430 /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		AF5398632193ED9B00D91430 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 				F4EBE5192194F3020058D44D /* OperatorResponse.swift */,
 				AF67563B2195366000D5E52C /* PostResponse.swift */,
 				AF5723A2219C9327003D2597 /* SessionsResponse.swift */,
+				AF4EEE3921A4A243007C1DFD /* SupervisorResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				AF5398632193ED9B00D91430 /* Project.swift */,
 				F4EBE5102194EE410058D44D /* Operator.swift */,
 				AF5723A0219C8E05003D2597 /* Session.swift */,
+				AF4EEE3021A49F04007C1DFD /* Supervisor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,7 +403,9 @@
 				AF5398602193E88700D91430 /* ProjectsViewController.swift in Sources */,
 				AF572398219C89B8003D2597 /* SessionCell.swift in Sources */,
 				AF5723A5219CCF61003D2597 /* SessionViewController.swift in Sources */,
+				AF4EEE3121A49F04007C1DFD /* Supervisor.swift in Sources */,
 				AFFDA8AA219335FC006661E7 /* WelcomeViewController.swift in Sources */,
+				AF4EEE3A21A4A243007C1DFD /* SupervisorResponse.swift in Sources */,
 				F4EBE52D219527290058D44D /* OperatorViewController.swift in Sources */,
 				F4EBE5112194EE410058D44D /* Operator.swift in Sources */,
 				AFFDA8B0219335FC006661E7 /* iBetterRide.xcdatamodeld in Sources */,
