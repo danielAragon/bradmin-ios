@@ -46,19 +46,9 @@ class AddProjectViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-    func handleResponse(response: PostResponse){
-        if response.code != "200" {
-            print("Error in response: \(response.message!)")
-            return
-        }
-    }
-    
-    func handleError(error: Error){
-        print("Error while requesting AddProject: \(error.localizedDescription)")
-    }
   
-    @IBAction func doneAction(_ sender: UIBarButtonItem) {
+    
+    @IBAction func saveAction(_ sender: UIBarButtonItem) {
         project.id = ""
         project.name = nameTextField.text
         project.date = dateTextField.text
@@ -66,7 +56,6 @@ class AddProjectViewController: UIViewController {
         project.num_session = 0
         BetterRideApi.postProject(fromProject: project)
         dismiss(animated: true, completion: nil)
-        
     }
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {

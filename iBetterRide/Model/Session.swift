@@ -15,4 +15,5 @@ struct Session : Codable {
     var avenue_first: String?
     var avenue_second: String?
     var status: String?
+    var project_id: String?
 }

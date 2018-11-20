@@ -91,6 +91,10 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
             let destination = segue.destination as! SessionViewController
             destination.session = sessions[currentRow]
         }
+        if segue.identifier == "showAddSession" {
+            let destination = segue.destination as! AddSessionViewController
+            destination.project_id = project?.id!
+        }
     }
  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
