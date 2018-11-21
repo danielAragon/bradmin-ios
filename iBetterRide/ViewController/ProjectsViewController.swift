@@ -10,7 +10,13 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class ProjectsViewController: UITableViewController {
+class ProjectsViewController: UITableViewController, AddProjectViewControllerDelegate {
+    func controller(controller: AddProjectViewController, project: Project) {
+        self.projects.append(project)
+        self.tableView.reloadData()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     var projects: [Project] = [Project]()
     var currentRow = 0
     
@@ -19,12 +25,6 @@ class ProjectsViewController: UITableViewController {
 
         BetterRideApi.getProject(responseHandler: self.handleResponse,
                                  errorHandler: self.handleError)
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     func handleResponse(response: ProjectsResponse){
@@ -57,55 +57,33 @@ class ProjectsViewController: UITableViewController {
         return cell
     }
  
-
-    /*
-    // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
-
     
-    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            if (projects[indexPath.row].num_session == 0) {
+                projects.remove(at: indexPath.row)
+                self.tableView.reloadData()
+            }else {
+                let alert = UIAlertController(title: "Denied Action", message: "Unable to delete an initiated project.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
- 
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        var itemMove = projects[fromIndexPath.row]
-        projects.remove(at: fromIndexPath.row)
-        projects.insert(itemMove, at: to.row)
+    
+    @IBAction func editButton(_ sender: UIBarButtonItem) {
+        self.isEditing = !self.isEditing
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
     override func prepare(for segue: UIStoryboardSegue,
                           sender: Any?) {
+        if segue.identifier == "showAddProject" {
+            let destination = segue.destination as! AddProjectViewController
+            destination.delegate = self
+        }
         if segue.identifier == "showProject" {
             let destination = segue.destination as! ProjectViewController
             destination.project = projects[currentRow]
