@@ -26,7 +26,7 @@ class OperatorCell: UITableViewCell {
     
     func update(from operator1: Operator){
         operatorImageView.setImage(fromUrlString: operator1.photo!, withDefaultNamed: "operatorPlaceHolder", withErrornamed: "operatorPlaceHolder")
-        operatorNameLabel.text = operator1.name
+        operatorNameLabel.text = "\(operator1.name!) \(operator1.last_name!)"
         
     }
 }
