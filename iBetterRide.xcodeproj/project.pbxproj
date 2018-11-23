@@ -31,7 +31,6 @@
 		AFFDA8B0219335FC006661E7 /* iBetterRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA8AE219335FC006661E7 /* iBetterRide.xcdatamodeld */; };
 		AFFDA8B22193360B006661E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFFDA8B12193360B006661E7 /* Assets.xcassets */; };
 		AFFDA8B52193360B006661E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFDA8B32193360B006661E7 /* LaunchScreen.storyboard */; };
-		AFFDA9092193888D006661E7 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */; };
 		AFFDA90B219388B6006661E7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA90A219388B6006661E7 /* ProfileViewController.swift */; };
 		AFFDA90D219389DE006661E7 /* UImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDA90C219389DE006661E7 /* UImageViewExtension.swift */; };
 		F4EBE5112194EE410058D44D /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EBE5102194EE410058D44D /* Operator.swift */; };
@@ -140,7 +139,6 @@
 		AFFDA8B42193360B006661E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFFDA8B62193360B006661E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFFDA8C521933AA3006661E7 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		AFFDA90A219388B6006661E7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AFFDA90C219389DE006661E7 /* UImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UImageViewExtension.swift; sourceTree = "<group>"; };
 		F4EBE5102194EE410058D44D /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				AFFDA8A9219335FC006661E7 /* WelcomeViewController.swift */,
-				AFFDA9082193888D006661E7 /* AnalyticsViewController.swift */,
 				AFFDA90A219388B6006661E7 /* ProfileViewController.swift */,
 				AFFDA90C219389DE006661E7 /* UImageViewExtension.swift */,
 				AF53985F2193E88700D91430 /* ProjectsViewController.swift */,
@@ -428,7 +425,6 @@
 				AF5723A1219C8E05003D2597 /* Session.swift in Sources */,
 				AFFDA90D219389DE006661E7 /* UImageViewExtension.swift in Sources */,
 				AFFDA90B219388B6006661E7 /* ProfileViewController.swift in Sources */,
-				AFFDA9092193888D006661E7 /* AnalyticsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
