@@ -16,10 +16,9 @@ class BetterRideApi{
     static let getSessionsUrl = "\(baseUrl)/sessions/projects"
     static let postSessionUrl = "\(baseUrl)/session"
     static let getSupervisorUrl = "\(baseUrl)/users/1"
-    static let getOperatorsUrl = "\(baseUrl)/userSession/organizations/1"
     static let getOperatorsInSessionUrl = "\(baseUrl)/userSession/sessions"
     static let getOperatorsNotInSessionUrl = "\(baseUrl)/userSession/noSessions"
-
+    static let getOperatorsUrl = "\(baseUrl)/operators/organizations/1"
     static let postProfileSupervisorUrl = "\(baseUrl)/supervisors"
     
     static func handleError(error: Error){
