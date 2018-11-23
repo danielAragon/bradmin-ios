@@ -854,7 +854,9 @@
                             <outlet property="delegate" destination="5tY-pg-dxv" id="hbS-a7-uLq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Operators" id="486-0R-Zxe"/>
+                    <navigationItem key="navigationItem" title="Operators" id="486-0R-Zxe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Xi-OK-eI9"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jVd-m3-h9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
