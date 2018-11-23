@@ -7,6 +7,11 @@
 //
 
 import UIKit
+class OperatorSessionCell: UICollectionViewCell{
+    
+    @IBOutlet weak var userImageView: RoundImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+}
 
 class SessionViewController: UIViewController {
     
@@ -17,10 +22,20 @@ class SessionViewController: UIViewController {
     @IBOutlet weak var avenueSecondLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var session: Session?
+    var operatorsInSession: [Operator] = []
+    override func viewDidLayoutSubviews() {
+        let flow = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        flow.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 1)
+
+        flow.minimumInteritemSpacing = 3
+        flow.minimumLineSpacing = 3
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        BetterRideApi.getOperatorsInSession(responseHandler: responseHandler.self, sessionId: (session?.id!)!)
         if let session = session,
             let dateLabel = dateLabel,
             let startedLabel = startedLabel,
@@ -41,29 +56,53 @@ class SessionViewController: UIViewController {
             }
         }
     }
-    /*
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+    private func responseHandler(response: OperatorResponse){
+        operatorsInSession = response.operators!
+        collectionView.reloadData()
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }*/
-    
-    @IBAction func addSessionOperatorAction(_ sender: UIBarButtonItem) {
+    @IBAction func addOperator(_ sender: Any) {
+        
     }
-    
     @IBAction func editSessionOperatorAction(_ sender: UIBarButtonItem) {
+        
     }
     
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension SessionViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return operatorsInSession.count + 1
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OperatorSessionCell", for: indexPath) as! OperatorSessionCell
+        if indexPath.row == operatorsInSession.count{
+            if operatorsInSession.count == 4{
+                cell.nameLabel.text = "Editar"
+                cell.userImageView.image = UIImage(named: "comprobado")
+            }else{
+                cell.nameLabel.text = "Agregar"
+                cell.userImageView.image = UIImage(named: "mas")
+            }
+        }else{
+            cell.nameLabel.text = operatorsInSession[indexPath.row].name!
+            cell.userImageView.setImage(fromUrlString: operatorsInSession[indexPath.row].photo!, withDefaultNamed: "user-icon", withErrornamed: "")
+        }
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == operatorsInSession.count {
+            let dialogsStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let customDialog = dialogsStoryboard.instantiateViewController(withIdentifier: "Dialog") as! AddEditOperatorViewController
+            
+            customDialog.animate = true
+            customDialog.animateDirection = .bottom
+            customDialog.sessionId = session!.id!
+            customDialog.definesPresentationContext = true
+            customDialog.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            customDialog.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            
+            self.present(customDialog, animated: false, completion: nil)
+        }
+    }
 }

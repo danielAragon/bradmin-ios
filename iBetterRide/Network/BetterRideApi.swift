@@ -17,6 +17,9 @@ class BetterRideApi{
     static let postSessionUrl = "\(baseUrl)/session"
     static let getSupervisorUrl = "\(baseUrl)/users/1"
     static let getOperatorsUrl = "\(baseUrl)/userSession/organizations/1"
+    static let getOperatorsInSessionUrl = "\(baseUrl)/userSession/sessions"
+    static let getOperatorsNotInSessionUrl = "\(baseUrl)/userSession/noSessions"
+
     static let postProfileSupervisorUrl = "\(baseUrl)/supervisors"
     
     static func handleError(error: Error){
@@ -28,7 +31,7 @@ class BetterRideApi{
         headers: [String: String],
         responseType: T.Type,
         responseHandler: @escaping ((T)-> (Void)),
-        errorHandler: (@escaping (Error) -> (Void)) = handleError){
+        errorHandler: (@escaping (Error) -> (Void))){
         Alamofire.request(urlString,
                           method: .get,
                           headers: headers)
@@ -67,7 +70,7 @@ class BetterRideApi{
     
     static func getSession(projectId id: String?,
                            responseHandler: @escaping (SessionsResponse) -> (Void),
-                           errorHandler: @escaping (Error) -> (Void)){
+                           errorHandler: (@escaping (Error) -> (Void)) = handleError){
         let headers = ["token": "FG5325YGJM35"]
         self.get(urlString: "\(getSessionsUrl)/\(id!)",
                  headers: headers,
@@ -137,7 +140,7 @@ class BetterRideApi{
     }
     
     static func getOperator(responseHandler: @escaping (OperatorResponse) -> (Void),
-                           errorHandler: @escaping (Error) -> (Void)){
+                           errorHandler: (@escaping (Error) -> (Void)) = handleError){
         let headers = ["token": "FG5325YGJM35"]
         self.get(urlString: getOperatorsUrl,
                  headers: headers,
@@ -145,9 +148,27 @@ class BetterRideApi{
                  responseHandler: responseHandler,
                  errorHandler: errorHandler)
     }
+    static func getOperatorsInSession(responseHandler: @escaping (OperatorResponse) -> (Void),
+                                      errorHandler: (@escaping (Error) -> (Void)) = handleError, sessionId: String){
+        let headers = ["token": "FG5325YGJM35"]
+        self.get(urlString: "\(getOperatorsInSessionUrl)/\(sessionId)",
+                 headers: headers,
+                 responseType: OperatorResponse.self,
+                 responseHandler: responseHandler,
+                 errorHandler: errorHandler)
+    }
+    static func getOperatorsNotInSession(responseHandler: @escaping (OperatorResponse) -> (Void),
+                                      errorHandler: (@escaping (Error) -> (Void)) = handleError, sessionId: String){
+        let headers = ["token": "FG5325YGJM35"]
+        self.get(urlString: "\(getOperatorsNotInSessionUrl)/\(sessionId)",
+            headers: headers,
+            responseType: OperatorResponse.self,
+            responseHandler: responseHandler,
+            errorHandler: errorHandler)
+    }
     
     static func getSupervisor(responseHandler: @escaping (SupervisorResponse) -> (Void),
-                            errorHandler: @escaping (Error) -> (Void)){
+                            errorHandler: (@escaping (Error) -> (Void)) = handleError){
         let headers = ["token": "FG5325YGJM35"]
         self.get(urlString: getSupervisorUrl,
                  headers: headers,

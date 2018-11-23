@@ -19,5 +19,115 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iBetterRide/ViewController/SessionViewController.swift"
+            timestampString = "564621513.1289411"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "SessionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iBetterRide.SessionViewController.collectionView.getter : weak Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "iBetterRide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielaragonore/Desktop/Moviles/bradmin-ios/iBetterRide/ViewController/SessionViewController.swift"
+                  timestampString = "564539353.263451"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iBetterRide.SessionViewController.collectionView.setter : weak Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "iBetterRide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielaragonore/Desktop/Moviles/bradmin-ios/iBetterRide/ViewController/SessionViewController.swift"
+                  timestampString = "564539353.27089"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iBetterRide.SessionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; iBetterRide.SessionViewController"
+                  moduleName = "iBetterRide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielaragonore/Desktop/Moviles/bradmin-ios/iBetterRide/ViewController/SessionViewController.swift"
+                  timestampString = "564539353.273972"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "696">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iBetterRide.SessionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;iBetterRide.SessionViewController&gt;"
+                  moduleName = "iBetterRide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielaragonore/Desktop/Moviles/bradmin-ios/iBetterRide/ViewController/SessionViewController.swift"
+                  timestampString = "564539353.2790509"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "667">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iBetterRide/ViewController/SessionViewController.swift"
+            timestampString = "564621513.129128"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iBetterRide/ViewController/SessionViewController.swift"
+            timestampString = "564621513.129186"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "responseHandler(response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
